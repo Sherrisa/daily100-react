@@ -2,12 +2,12 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, Routes, Route } from "react-router-dom";
 import Home from "../pages/home";
-import Today from "../pages/today";
+import Today from "./June07Comp";
 
 function NavComp() {
   return (
     <div>
-      <Navbar bg="dark" variant={"dark"} expand="lg">
+      <Navbar bg="myBlue" variant={"dark"} expand="lg">
         <Container fluid>
           <Navbar.Brand as={Link} to="/">
             Daily 100
