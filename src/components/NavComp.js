@@ -2,7 +2,8 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, Routes, Route } from "react-router-dom";
 import Home from "../pages/home";
-import Today from "./June07Comp";
+import Yesterday from "../pages/yesterday";
+import Today from "../pages/today";
 
 function NavComp() {
   return (
@@ -18,15 +19,20 @@ function NavComp() {
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/today">
-                Today's Project
+              <Nav.Link as={Link} to="/yesterday">
+                Yesterday
               </Nav.Link>
+              <Nav.Link as={Link} to="/today">
+                Today
+              </Nav.Link>
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/yesterday" element={<Yesterday />} />
         <Route path="/today" element={<Today />} />
       </Routes>
     </div>
