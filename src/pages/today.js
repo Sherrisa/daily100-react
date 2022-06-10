@@ -1,10 +1,10 @@
 import React from 'react';
-import June08 from "../components/June08Comp";
+import June09 from "../components/June09Comp";
 
 function Today() {
   return (
     <div>
-      <June08 />
+      <June09 />
     </div>
   )
 }

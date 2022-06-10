@@ -1,8 +1,8 @@
 import React from "react";
+import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 import chelanKinsley from "../assets/images/DSC04861.JPG";
 import chelanBrooklyn from "../assets/images/DSC04902.JPG";
 import chelanFishing from "../assets/images/DSC04906.JPG";
@@ -10,7 +10,7 @@ import zooBrooklyn from "../assets/images/DSC05048.JPG";
 import zooJaxs from "../assets/images/DSC05074.JPG";
 import zooBrooklynBen from "../assets/images/DSC05034.JPG";
 
-const Gallery = [
+const chelanGallery = [
   {
     image: chelanKinsley,
     title: "Kinsley at the Beach",
@@ -26,6 +26,9 @@ const Gallery = [
     title: "Jaxson and Kinsley Fishing",
     text: "Jaxson teaching Kinsley how to throw a fishing line at Lake Chelan.",
   },
+];
+
+const zooGallery = [
   {
     image: zooBrooklyn,
     title: "Brooklyn's First Birthday",
@@ -43,28 +46,53 @@ const Gallery = [
   },
 ];
 
-function June08() {
+function June09Comp() {
   return (
     <div>
       <Container>
         <Row>
-          {Gallery.map((element, index) => {
-            return (
-              <Col xs={12} lg={6} xl={4}>
-                <Card>
-                  <Card.Img variant="top" src={element.image} />
-                  <Card.Body>
-                    <Card.Title>{element.title}</Card.Title>
-                    <Card.Text>{element.text}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
+          <Col xs={12} lg={6}>
+            <Carousel>
+              {chelanGallery.map((element, index) => {
+                return (
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={element.image}
+                      alt="First slide"
+                    />
+                    <Carousel.Caption>
+                      <h3>{element.title}</h3>
+                      <p>{element.text}</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+          </Col>
+          <Col xs={12} lg={6}>
+            <Carousel>
+              {zooGallery.map((element, index) => {
+                return (
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      src={element.image}
+                      alt="First slide"
+                    />
+                    <Carousel.Caption>
+                      <h3>{element.title}</h3>
+                      <p>{element.text}</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+          </Col>
         </Row>
       </Container>
     </div>
   );
 }
 
-export default June08;
+export default June09Comp;
