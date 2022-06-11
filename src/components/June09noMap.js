@@ -12,7 +12,7 @@ import zooBrooklynBen from "../assets/images/DSC05034.JPG";
 
 function June09Comp() {
   return (
-    <div>
+    <>
       <Container>
         <Row>
           <Col xs={12} lg={6}>
@@ -109,7 +109,7 @@ function June09Comp() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   );
 }
 
